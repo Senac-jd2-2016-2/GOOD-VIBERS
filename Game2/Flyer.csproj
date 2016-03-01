@@ -39,7 +39,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Contexto.cs" />
-    <Compile Include="Jogador.cs" />
     <Compile Include="Personagem.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Program.cs" />
@@ -53,6 +52,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Fundo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\Kirby.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

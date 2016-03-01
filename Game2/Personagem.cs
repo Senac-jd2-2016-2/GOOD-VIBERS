@@ -3,52 +3,36 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
 
 namespace Game2
 {
     class Personagem
     {
-        private float posicaoX;
-        private float posicaoY;
-        private Texture2D textura;
-        private bool estaVivo;
+        public float posicaoX;
+        public float posicaoY;
+        public Texture2D textura;
+        public bool estaVivo;
 
-        //Encapsulamento
-        public float getPosicaoX()
+        public Personagem(int x1, int y1)
         {
-            return posicaoX;
-        }
-        public void setPosicaoX(float posicaoX)
-        {
-            this.posicaoX = posicaoX;
-        }
-        public float getPosicaoY()
-        {
-            return posicaoY;
-        }
-        public void setPosicaoY(float posicaoY)
-        {
-            this.posicaoY = posicaoY;
-        }
-        public Texture2D getTextura()
-        {
-            return textura;
-        }
-        public void setTextura(Texture2D textura)
-        {
-            this.textura = textura;
+            posicaoX = x1;
+            posicaoY = y1;
         }
 
-        public bool getEstaVivo()
+        public Vector2 getVector2() 
         {
-            return estaVivo;
-        }
-        public void setEstaVivo(bool estaVivo)
-        {
-            this.estaVivo = estaVivo;
+            return new Vector2(posicaoX, posicaoY);
         }
 
-
+        public void moverX(int quantidadeDePassos)
+        {
+            posicaoX += quantidadeDePassos;
+        }
+        public void moverY(int quantidadeDePassos)
+        {
+            posicaoY += quantidadeDePassos;
+        }
     
     }
 }
