@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Input;
 namespace Game2
 {
   //alt
+    //alt2
     public class Game1 : Game
     {
         GraphicsDeviceManager graphics;
