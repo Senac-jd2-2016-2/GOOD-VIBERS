@@ -23,6 +23,8 @@ namespace Game2
    
 
             base.Initialize();
+            Contexto.inicializar(Content);
+            
           
         }
 
@@ -64,7 +66,7 @@ namespace Game2
                 }
             }
 
-      
+            Fisicas.AdicionarGravidade(Contexto.jogador);      
 
             base.Update(gameTime);
         }
