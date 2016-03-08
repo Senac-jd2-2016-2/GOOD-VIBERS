@@ -10,6 +10,9 @@ namespace Game2
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        KeyboardState ultimaTecla;
+        bool pulou;
+
 
         public Game1()
         {
@@ -24,6 +27,8 @@ namespace Game2
 
             base.Initialize();
             Contexto.inicializar(Content);
+            
+              
             
           
         }
@@ -48,26 +53,31 @@ namespace Game2
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            Keys[] keys = Keyboard.GetState().GetPressedKeys();
+            
 
-            foreach(Keys a in keys)
-            {
-                if (a.Equals(Keys.Right) || a.Equals(Keys.D))
-                {
-                    Contexto.jogador.moverX(2);
-                }
-                if (a.Equals(Keys.Left) || a.Equals(Keys.A))
-                {
-                    Contexto.jogador.moverX(-2);
-                }
-                if (a.Equals(Keys.Space))
-                {
-                    Contexto.jogador.moverY(-2);
-                }
-            }
 
-            Fisicas.AdicionarGravidade(Contexto.jogador);      
+            if ((Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D)))
+                {
+                    Contexto.jogador.moverX(10);
+                }
+                if (Keyboard.GetState().IsKeyDown(Keys.Left) || Keyboard.GetState().IsKeyDown(Keys.A))
+                {
+                    Contexto.jogador.moverX(-10);
+                }
+                if (Keyboard.GetState().IsKeyDown(Keys.Space) && (ultimaTecla.IsKeyUp(Keys.Space)))
+                {
+                    pulou = true;
+                }
 
+                if (pulou)
+                {
+                    Contexto.fisica.Pular(Contexto.jogador, pulou);
+                }
+           
+            Contexto.fisica.AdicionarGravidade(Contexto.jogador); 
+            Contexto.Fas1.LimitaChao(Contexto.jogador);
+
+            ultimaTecla = Keyboard.GetState();
             base.Update(gameTime);
         }
 

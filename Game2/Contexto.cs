@@ -14,7 +14,8 @@ namespace Game2
     {
         public static Personagem jogador = new Personagem(150, 240);
         public static Texture2D background ;
-        public static Fisicas fisica;
+        public static Fisicas fisica = new Fisicas();
+        public static Mapa Fas1 = new Mapa();
 
         public static void inicializar(ContentManager content)
         {
