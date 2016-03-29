@@ -7,7 +7,7 @@ namespace Game2
 {
     class Mapa
     {
-        public float ymin = 250 ;
+        public float ymin = 370 ;
         public float ymax = 0;
         
         public float x0;

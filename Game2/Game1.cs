@@ -66,15 +66,21 @@ namespace Game2
                 }
                 if (Keyboard.GetState().IsKeyDown(Keys.Space) && (ultimaTecla.IsKeyUp(Keys.Space)))
                 {
+
                     pulou = true;
                 }
+            
+               
 
-                if (pulou)
-                {
-                    Contexto.fisica.Pular(Contexto.jogador, pulou);
-                }
            
-            Contexto.fisica.AdicionarGravidade(Contexto.jogador); 
+    
+            if (pulou)
+            {
+                Contexto.fisica.pulo(Contexto.jogador,pulou);
+                pulou = Contexto.fisica.pulo(Contexto.jogador, pulou);
+            }
+           
+            Contexto.fisica.AdicionarGravidade(Contexto.jogador);
             Contexto.Fas1.LimitaChao(Contexto.jogador);
 
             ultimaTecla = Keyboard.GetState();
@@ -87,8 +93,8 @@ namespace Game2
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             spriteBatch.Begin();
-            spriteBatch.Draw(Contexto.background, new Rectangle(0, 0, 800, 480), Color.White);
-            spriteBatch.Draw(Contexto.jogador.textura, Contexto.jogador.getVector2(), Color.White);
+            spriteBatch.Draw(Contexto.background, new Rectangle(1, 256, 798, 224), Color.White);
+            spriteBatch.Draw(Contexto.jogador.textura, new Rectangle((int)Contexto.jogador.posicaoX,(int)Contexto.jogador.posicaoY,59,46), Color.White);
 
             spriteBatch.End();
 

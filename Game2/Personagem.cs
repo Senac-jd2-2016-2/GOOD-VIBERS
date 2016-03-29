@@ -13,6 +13,7 @@ namespace Game2
         public float posicaoY;
         public Texture2D textura;
         public bool estaVivo;
+        public Rectangle personagem;
 
         public Personagem(int x1, int y1)
         {
