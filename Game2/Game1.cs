@@ -95,6 +95,7 @@ namespace Game2
             spriteBatch.Begin();
             spriteBatch.Draw(Contexto.background, new Rectangle(1, 256, 798, 224), Color.White);
             spriteBatch.Draw(Contexto.jogador.textura, new Rectangle((int)Contexto.jogador.posicaoX,(int)Contexto.jogador.posicaoY,59,46), Color.White);
+            spriteBatch.Draw(Contexto.inimigo.textura, new Rectangle((int)Contexto.inimigo.posicaoX, (int)Contexto.inimigo.posicaoY, 200, 150), Color.White);
 
             spriteBatch.End();
 

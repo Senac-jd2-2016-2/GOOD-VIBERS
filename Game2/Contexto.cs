@@ -14,6 +14,7 @@ namespace Game2
     {
         public static Personagem jogador = new Personagem(150, 50);
         public static Texture2D background ;
+        public static Personagem inimigo = new Personagem(600, 260);
         public static Fisicas fisica = new Fisicas();
         public static Mapa Fas1 = new Mapa();
 
@@ -21,6 +22,8 @@ namespace Game2
         {
       
             jogador.textura = content.Load<Texture2D>("Kirby");
+            inimigo.textura = content.Load<Texture2D>("ms5");
+            
             background = content.Load<Texture2D>("Fundo");
 
         }
