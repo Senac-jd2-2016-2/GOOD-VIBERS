@@ -12,6 +12,7 @@ namespace Game2
         SpriteBatch spriteBatch;
         KeyboardState ultimaTecla;
         bool pulou;
+        float[] posicaoAtual = new float[2];
 
 
         public Game1()
@@ -68,6 +69,7 @@ namespace Game2
                 {
 
                     pulou = true;
+                    posicaoAtual = Contexto.fisica.retornaPosicao(Contexto.jogador);
                 }
             
                
@@ -76,8 +78,9 @@ namespace Game2
     
             if (pulou)
             {
-                Contexto.fisica.pulo(Contexto.jogador,pulou);
-                pulou = Contexto.fisica.pulo(Contexto.jogador, pulou);
+                
+                Contexto.fisica.pulo(Contexto.jogador,pulou,posicaoAtual,Contexto.Fas1);
+                pulou = Contexto.fisica.pulo(Contexto.jogador, pulou,posicaoAtual,Contexto.Fas1);
             }
            
             Contexto.fisica.AdicionarGravidade(Contexto.jogador);

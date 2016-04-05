@@ -14,30 +14,7 @@ namespace Game2
         public float x0;
         public float x1;
 
-        public void LimitaChao(Personagem x)
-        {
-
-
-            if (x.posicaoY <= ymax)
-            {
-                x.posicaoY = ymax;
-            }
-            if (x.posicaoY >= ymin)
-            {
-                x.posicaoY = ymin;
-            }
-            if (x.posicaoX >= 380 && x.posicaoX <=  550 && x.posicaoY <= 300)
-            {
-                ymin = yminplataforma;
-            }
-            else
-            {
-                ymin = 370;
-            }
         }
-
         
-
-
-    }
+        
 }

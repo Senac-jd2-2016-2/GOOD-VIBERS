@@ -17,27 +17,22 @@ namespace Game2
 
 
         }
-        /*
-        public void LimitaPulo(Personagem x, bool pulando)
+        public float[] retornaPosicao(Personagem x)
         {
-            float alturaMax =  200;
+            float[] vet = new float[2];
+            vet[0] = x.posicaoX;
+            vet[1] = x.posicaoY;
+            return vet;
+        }        
 
-            if (x.posicaoY <= alturaMax)
-            {
-                x.posicaoY = alturaMax;
-                pulando = false;
-                
-            }
-            
-        }
-         */
-        public bool pulo(Personagem x,bool pulando)
+        public bool pulo(Personagem x,bool pulando,float[] posicaoAtual, Mapa fase)
         {
-                float alturaMax =200;
+           
+                float alturaMax = posicaoAtual[1] - 200;
                 x.posicaoY = x.posicaoY - 7;
                
 
-                if (x.posicaoY <= alturaMax)
+                if (x.posicaoY <= alturaMax || x.posicaoY <= fase.ymax)
                 {
                     x.posicaoY = alturaMax;
                     pulando = false;

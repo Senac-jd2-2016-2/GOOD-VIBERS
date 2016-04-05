@@ -16,7 +16,7 @@ namespace Game2
         public static Texture2D background ;
         public static Personagem inimigo = new Personagem(600, 260);
         public static Fisicas fisica = new Fisicas();
-        public static Mapa Fas1 = new Mapa();
+        public static Fase1 Fas1 = new Fase1();
 
         public static void inicializar(ContentManager content)
         {
@@ -27,5 +27,6 @@ namespace Game2
             background = content.Load<Texture2D>("Fundo");
 
         }
+  
     }
 }
