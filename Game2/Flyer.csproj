@@ -40,6 +40,7 @@
   <ItemGroup>
     <Compile Include="Fisicas.cs" />
     <Compile Include="Contexto.cs" />
+    <Compile Include="GameObject.cs" />
     <Compile Include="Mapa.cs" />
     <Compile Include="Fase1.cs" />
     <Compile Include="Personagem.cs" />

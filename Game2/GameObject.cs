@@ -5,11 +5,10 @@ using System.Text;
 
 namespace Game2
 {
-    class Fase1
+    class GameObject
     {
-        
-        Mapa map = new Mapa();
-        map.LimitaChao();
-        public void LimitaPlataforma();
+
+
+
     }
 }

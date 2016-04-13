@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework;
 
 namespace Game2
 {
-    class Personagem
+    class Personagem : GameObject
     {
         public float posicaoX;
         public float posicaoY;
