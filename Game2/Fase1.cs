@@ -5,11 +5,29 @@ using System.Text;
 
 namespace Game2
 {
-    class Fase1
+    class Fase1 : Mapa
     {
-        
-        Mapa map = new Mapa();
-        map.LimitaChao();
-        public void LimitaPlataforma();
+
+        public void LimitaChao(Personagem x)
+        {
+
+
+            if (x.posicaoY <= ymax)
+            {
+                x.posicaoY = ymax;
+            }
+            if (x.posicaoY >= ymin)
+            {
+                x.posicaoY = ymin;
+            }
+            if (x.posicaoX >= 380 && x.posicaoX <= 550 && x.posicaoY <= 300)
+            {
+                ymin = yminplataforma;
+            }
+            else
+            {
+                ymin = 370;
+            }
+        }
     }
 }

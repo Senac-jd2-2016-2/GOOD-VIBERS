@@ -7,7 +7,8 @@ namespace Game2
 {
     class Mapa
     {
-         
+
+        public float yminplataforma = 280;  
         public float ymin = 370 ;
         public float ymax = 0;
         
@@ -27,7 +28,7 @@ namespace Game2
                 x.posicaoY = ymin;
             }
 
-            /*if (x.posicaoX >= 380 && x.posicaoX <= 550 && x.posicaoY <= 300)
+            if (x.posicaoX >= 380 && x.posicaoX <= 550 && x.posicaoY <= 300)
             {
                 ymin = yminplataforma;
             }
@@ -35,7 +36,7 @@ namespace Game2
             {
                 ymin = 370;
             }
-             */
+             
         }
        
 
