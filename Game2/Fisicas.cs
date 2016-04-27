@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 namespace Game2
 {
     class Fisicas
@@ -17,12 +18,12 @@ namespace Game2
 
 
         }
-        public float[] retornaPosicao(Personagem x)
+        public Vector2 retornaPosicao(Personagem x)
         {
-            float[] vet = new float[2];
-            vet[0] = x.posicaoX;
-            vet[1] = x.posicaoY;
-            return vet;
+            
+            return new Vector2(x.posicaoX, x.posicaoY);
+            
+           
         }        
 
         public bool pulo(Personagem x,bool pulando,float[] posicaoAtual, Mapa fase)

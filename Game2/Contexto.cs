@@ -17,7 +17,7 @@ namespace Game2
         public static Personagem inimigo = new Personagem(600, 260);
         public static Fisicas fisica = new Fisicas();
         public static Fase1 Fas1 = new Fase1();
-
+       
         public static void inicializar(ContentManager content)
         {
       

@@ -50,12 +50,13 @@ namespace Game2
 
        
         protected override void Update(GameTime gameTime)
-        {
+        {   
+
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            
-
+          
+            posicaoAtual = Contexto.fisica.retornaPosicao(Contexto.jogador);
 
             if ((Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D)))
                 {
@@ -69,7 +70,7 @@ namespace Game2
                 {
 
                     pulou = true;
-                    posicaoAtual = Contexto.fisica.retornaPosicao(Contexto.jogador);
+                   
                 }
             
                
@@ -86,8 +87,15 @@ namespace Game2
             Contexto.fisica.AdicionarGravidade(Contexto.jogador);
             Contexto.Fas1.LimitaChao(Contexto.jogador);
 
+            
+            Camera.Update(, 1800, 224);
+
+
+
+
             ultimaTecla = Keyboard.GetState();
             base.Update(gameTime);
+
         }
 
 
