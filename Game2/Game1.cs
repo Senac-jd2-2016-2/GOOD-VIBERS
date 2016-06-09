@@ -56,7 +56,7 @@ namespace Game2
                 Exit();
 
           
-            posicaoAtual = Contexto.fisica.retornaPosicao(Contexto.jogador);
+           // posicaoAtual = Contexto.fisica.retornaPosicao(Contexto.jogador);
 
             if ((Keyboard.GetState().IsKeyDown(Keys.Right) || Keyboard.GetState().IsKeyDown(Keys.D)))
                 {
@@ -88,7 +88,7 @@ namespace Game2
             Contexto.Fas1.LimitaChao(Contexto.jogador);
 
             
-            Camera.Update(, 1800, 224);
+           // Camera.Update(, 1800, 224);
 
 
 

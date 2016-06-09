@@ -33,8 +33,8 @@ namespace Game2
                 Center.Y = yOffset - (ViewPort.Height / 2);
             else Center.Y = position.Y;
 
-            Transform = Matrix.CreateTranslation(new Vector3(-Center.X + (ViewPort.Width / 2),
-                                                             -Center.Y + (ViewPort.Height / 2), 0));
+            Transform = Matrix.CreateTranslation(new Vector3( -(ViewPort.Width / 2),
+                                                             -(ViewPort.Height / 2), 0));
         }
     }
 }
